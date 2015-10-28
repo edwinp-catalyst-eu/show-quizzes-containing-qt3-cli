@@ -30,7 +30,6 @@ $sql = "SELECT DISTINCT
           JOIN {quiz_slots} qs ON qs.questionid = q.id
           JOIN {quiz} qz ON qz.id = qs.quizid
           JOIN {course} c ON c.id = qz.course
-          JOIN {context} ctx ON ctx.instanceid = qz.id
           JOIN {course_modules} cm ON cm.instance = qz.id
           JOIN {modules} m ON m.id = cm.module
          WHERE q.qtype = ?
